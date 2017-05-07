@@ -64,7 +64,7 @@ import { OnInit } from '@angular/core';
     border-radius: 4px 0 0 4px;
   }
 `],
-providers: [HeroService]
+  providers: [HeroService]
 })
 
 export class AppComponent implements OnInit {
@@ -77,9 +77,9 @@ export class AppComponent implements OnInit {
   }
   constructor(private heroService: HeroService) { }
   getHeroes(): void {
-    this.heroes = this.heroService.getHeroes();
+    this.heroService.getHeroes().then(heroes => this.heroes = heroes);
   }
-   ngOnInit(): void {
+  ngOnInit(): void {
     this.getHeroes();
   }
 }
