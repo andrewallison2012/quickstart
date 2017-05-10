@@ -16,7 +16,7 @@ var routes = [{
     },
     {
         path: '',
-        redirectTo: '/dashboard',
+        redirectTo: '/heroes',
         pathMatch: 'full'
     },
     {
